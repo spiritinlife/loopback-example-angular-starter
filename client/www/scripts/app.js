@@ -24,9 +24,14 @@ app.config([
 
     $stateProvider.
       state('home', {
-        url: '/',
+        url: '/home',
         controller: 'HomeMainController',
         templateUrl: './scripts/modules/home/templates/home.main.html'
+      }).
+      state('home.instance', {
+        url: '/:name',
+        controller: 'HomeInstanceController',
+        templateUrl: './scripts/modules/home/templates/home.instance.html'
       });
 
   }
