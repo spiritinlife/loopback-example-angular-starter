@@ -8,17 +8,60 @@ Home.controller('HomeMainController', [
     console.log('Home Main Controller');
 
 
-
-
+    $scope.currModel = {};
     $scope.examples = [];
-    var exs = HomeService.getExampleModels();
-    exs.$promise.
-      then(function (result) {
 
-        $scope.examples = result[0];
+    $scope.submitForm = function(isValid) {
+
+      if (isValid){
+        var newModel = HomeService.createNewModel($scope.currModel);
+        newModel.$promise.
+          then(function (result) {
+
+            $scope.currModel = {};
+
+            loadExamples();
+
+          }
+        );
+      }
 
 
-      });
+
+
+    };
+
+    $scope.deleteItem = function(item) {
+      if (confirm('delete item?')) {
+
+
+        var delModel = HomeService.deleteItem(item);
+        delModel.$promise.
+          then(function (result) {
+
+            loadExamples();
+
+          });
+      }
+    }
+
+
+
+    function loadExamples() {
+
+      var exs = HomeService.getExampleModels();
+      exs.$promise.
+        then(function (result) {
+
+          $scope.examples = result;
+
+
+        }
+      );
+
+
+    }
+    loadExamples();
 
   }
 ]);

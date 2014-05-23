@@ -1,4 +1,12 @@
 <h2 class="sample-header">Hello World</h2>
+<form role="form" name="ExampleModelForm" ng-submit="submitForm(ExampleModelForm.$valid)" novalidate>
+  <div class="form-group">
+    <label>Model Name</label>
+    <input type="text" name="name" ng-model="currModel.name" required >
+  </div>
+  <input type="submit" value="save" ng-disabled="ExampleModelForm.$invalid">
+</form>
+
 <ul>
-  <li ng-repeat="example in examples">{{ example.name }}</li>
+  <li ng-repeat="example in examples">{{ example.name }}  <input type="button" value="x" ng-click="deleteItem(example)" ></li>
 </ul>
