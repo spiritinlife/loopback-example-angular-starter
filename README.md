@@ -16,8 +16,8 @@ Follow the steps below to create the application from scratch. Doing this will g
 
 Otherwise, if you just want to see the example in action, do this:
 ```
-git clone https://github.com/strongloop/loopback-example-angular
-cd loopback-example-angular
+git clone https://github.com/strongloop/loopback-example-angular-starter
+cd loopback-example-angular-starter
 npm install
 slc run
 ```
@@ -284,7 +284,7 @@ slc run
           .then(function(todo) {
             $scope.newTodo = '';
             $scope.todoForm.content.$setPristine();
-            $('.focus').focus();
+            $('.focus').focus(); //JQuery hack for refocusing text input
             getTodos();
           });
       };
@@ -299,6 +299,9 @@ slc run
       };
     }]);
   ```
+
+  >If you know a better way to refocus a text input using purely Angular
+  >(instead of the JQuery hack above), submit a pull request please. ;)
 
   Then add `controllers.js` as a dependency in `index.html`:
   ```
