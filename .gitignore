@@ -1,4 +1,6 @@
-node_modules
-bower_components
-.idea
 .DS_Store
+*.swo
+*.swp
+db.json
+client/vendor
+node_modules

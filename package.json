@@ -1,17 +1,24 @@
 {
-  "version": "0.0.1",
-  "main": "app.js",
-  "bin": "server.js",
+  "name": "loopback-example-angular-starter",
+  "version": "2.0.0",
+  "main": "server/server.js",
   "scripts": {
-    "start": "node app.js"
+    "pretest": "jshint .",
+    "postinstall": "bower install"
   },
   "dependencies": {
-    "loopback": "1.x >=1.7.0",
-    "loopback-angular": "^1.1.0"
+    "compression": "^1.0.3",
+    "errorhandler": "^1.1.1",
+    "loopback": "^2.0.0",
+    "loopback-boot": "^2.0.0",
+    "loopback-datasource-juggler": "^2.7.0",
+    "serve-favicon": "^2.0.1"
   },
   "optionalDependencies": {
-    "loopback-explorer": "~1.1.0",
-    "loopback-push-notification": "~1.2.0"
+    "loopback-explorer": "^1.1.0"
   },
-  "name": "angular-starter"
+  "license": {
+    "name": "Dual MIT/StrongLoop",
+    "url": "https://github.com/strongloop/loopback-example-angular-starter/blob/master/LICENSE"
+  }
 }
