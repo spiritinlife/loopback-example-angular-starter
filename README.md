@@ -27,11 +27,9 @@ slc run
 Otherwise, follow the steps below to create the application from scratch.  The example is a typical Todo list web app.
 
 1. **Create the application**.
-
   Run `slc loopback`, and name the app `loopback-example-angular-starter`.
 
 2. **Configure db.json.**
-
   Edit `server/datasources.json` to look like:
   ```
 {
@@ -45,7 +43,6 @@ Otherwise, follow the steps below to create the application from scratch.  The e
   This change will persist model instances to a JSON file. For more information, see the [memory connector documentation](http://docs.strongloop.com/display/LB/Memory+connector#Memoryconnector-Datapersistance).
 
 3. **Create the Todo model.**
-
   Run `slc loopback:model Todo` to create the Todo model. Use the memory connector, expose the model via REST, leave the default plural form and add a required String property called "content".
 
 4. **Add a sample model.**
