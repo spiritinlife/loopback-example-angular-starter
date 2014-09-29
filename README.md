@@ -15,6 +15,7 @@ Before starting, makes sure you've followed [Getting Started with LoopBack](http
 Follow the steps below to create the application from scratch. In this example, we will be creating a typical Todo list web app. Doing this will give you a better understanding of how to implement AngularJS as a front-end solution for your LoopBack application.
 
 Otherwise, if you just want to see the example in action, do this:
+
 ```
 git clone https://github.com/strongloop/loopback-example-angular-starter
 cd loopback-example-angular-starter
