@@ -2,7 +2,9 @@
 This example demonstrates how to use [LoopBack](http://loopback.io) with [AngularJS](http://angularjs.org/).
 
 ##Prerequisites
-Before starting, makes sure you've followed [Getting Started with LoopBack](http://docs.strongloop.com/display/LB/Getting+started+with+LoopBack) to install Node and LoopBack. You will also need to have Bower installed (`npm install -g bower`) as we use it pull in our front-end dependencies. In addition, you will need a basic understanding of:
+Before starting, makes sure you've followed [Getting Started with LoopBack](http://docs.strongloop.com/display/LB/Getting+started+with+LoopBack) to install Node and LoopBack. You will also need [Bower](http://bower.io/) (`npm install -g bower`) to manage front-end dependencies. 
+
+In addition, you will need a basic understanding of:
 
 - Angular
 - Angular Resource
