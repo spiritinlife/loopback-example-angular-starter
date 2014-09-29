@@ -41,7 +41,7 @@ Otherwise, follow the steps below to create the application from scratch.  The e
   }
   ```
 
-  >This allows us to persist our model instances to a JSON file. For more information, see the [memory connector documentation](http://docs.strongloop.com/display/LB/Memory+connector#Memoryconnector-Datapersistance).
+  This change will persist model instances to a JSON file. For more information, see the [memory connector documentation](http://docs.strongloop.com/display/LB/Memory+connector#Memoryconnector-Datapersistance).
 
 3. **Create the Todo model.**
   Run `slc loopback:model Todo` to create the Todo model. Use the (default) memory connector, expose the model via REST, leave the default plural form and a required String property called "content".
