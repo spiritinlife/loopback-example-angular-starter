@@ -90,7 +90,7 @@ Otherwise, follow the steps below to create the application from scratch.  The e
   }
   ```
 
-  >Bower installs packages in `bower_components` by default, but we reconfigure this to `client/vendor` instead to make it easier to import files into `index.html`;
+  >Bower installs packages in `bower_components` by default, but we reconfigure this to `client/vendor` instead to make it easier to import files into `index.html`.
 
 6. **Install front-end dependencies.**
   Run the `bower install angular angular-resource angular-ui-router bootstrap` from the project root.
@@ -155,7 +155,7 @@ Otherwise, follow the steps below to create the application from scratch.  The e
   ```
 
   Next, replace the `body` tag and it's contents with the following contents:
-  
+
   ```
   <body ng-app="app">
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">

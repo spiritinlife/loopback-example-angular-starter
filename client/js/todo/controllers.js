@@ -2,11 +2,11 @@
 
 angular
   .module('app')
-  .controller('TodoCtrl', ['$scope', '$state', 'TodoService', function($scope,
-      $state, TodoService) {
+  .controller('TodoCtrl', ['$scope', '$state', 'Todo', function($scope,
+      $state, Todo) {
     $scope.todos = [];
     function getTodos() {
-      TodoService
+      Todo
         .find()
         .$promise
         .then(function(results) {
@@ -16,7 +16,7 @@ angular
     getTodos();
 
     $scope.addTodo = function() {
-      TodoService
+      Todo
         .create($scope.newTodo)
         .$promise
         .then(function(todo) {
@@ -28,7 +28,7 @@ angular
     };
 
     $scope.removeTodo = function(item) {
-      TodoService
+      Todo
         .deleteById(item.id)
         .$promise
         .then(function() {
