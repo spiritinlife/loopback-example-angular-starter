@@ -2,7 +2,7 @@
 This example demonstrates how to use [LoopBack](http://loopback.io) with [AngularJS](http://angularjs.org/).
 
 ##Prerequisites
-Before starting, makes sure you've followed [Getting Started with LoopBack](http://docs.strongloop.com/display/LB/Getting+started+with+LoopBack) to install Node and LoopBack. You will also need [Bower](http://bower.io/) (`npm install -g bower`) to manage front-end dependencies. 
+Before starting, makes sure you've followed [Getting Started with LoopBack](http://docs.strongloop.com/display/LB/Getting+started+with+LoopBack) to install Node and LoopBack. You will also need [Bower](http://bower.io/) (`npm install -g bower`) to manage front-end dependencies.
 
 In addition, you will need a basic understanding of:
 
@@ -24,7 +24,7 @@ npm install
 slc run
 ```
 
-Otherwise, follow the steps below to create the application from scratch.  The example is a typical Todo list web app. 
+Otherwise, follow the steps below to create the application from scratch.  The example is a typical Todo list web app.
 
 1. **Create the application**.
   Run `slc loopback`, and name the app `loopback-example-angular-starter`.
@@ -46,7 +46,7 @@ Otherwise, follow the steps below to create the application from scratch.  The e
 3. **Create the Todo model.**
   Run `slc loopback:model Todo` to create the Todo model. Use the (default) memory connector, expose the model via REST, leave the default plural form and a required String property called "content".
 
-4. **Add a sample model.** 
+4. **Add a sample model.**
   Run `slc run` to start the server, go to http://localhost:3000/explorer and add a *Todo* instance with the following data:
 
   ```
@@ -55,7 +55,7 @@ Otherwise, follow the steps below to create the application from scratch.  The e
   }
   ```
   Verify that model has been inserted by opening `db.json` (it will be created where you ran `slc run`). You should see this:
-  
+
   ```
   {
     "ids": {
@@ -219,7 +219,7 @@ Otherwise, follow the steps below to create the application from scratch.  The e
   >If you're using `jshint`, you can add `"predef": ['angular']` to `.jshintrc` to prevent Angular specific warnings.
 
   Then add `apps.js` as a dependency in `index.html`:
-  
+
   ```
   ...
   <script src="vendor/angular-ui-router/release/angular-ui-router.js"></script>
@@ -263,11 +263,11 @@ Otherwise, follow the steps below to create the application from scratch.  The e
 
   angular
     .module('app')
-    .controller('TodoCtrl', ['$scope', '$state', 'TodoService', function($scope,
-        $state, TodoService) {
+    .controller('TodoCtrl', ['$scope', '$state', 'Todo', function($scope,
+        $state, Todo) {
       $scope.todos = [];
       function getTodos() {
-        TodoService
+        Todo
           .find()
           .$promise
           .then(function(results) {
@@ -277,7 +277,7 @@ Otherwise, follow the steps below to create the application from scratch.  The e
       getTodos();
 
       $scope.addTodo = function() {
-        TodoService
+        Todo
           .create($scope.newTodo)
           .$promise
           .then(function(todo) {
@@ -289,7 +289,7 @@ Otherwise, follow the steps below to create the application from scratch.  The e
       };
 
       $scope.removeTodo = function(item) {
-        TodoService
+        Todo
           .deleteById(item.id)
           .$promise
           .then(function() {
@@ -303,7 +303,7 @@ Otherwise, follow the steps below to create the application from scratch.  The e
   >(instead of the JQuery hack above), submit a pull request please. ;)
 
   Then add `controllers.js` as a dependency in `index.html`:
-  
+
   ```
   ...
   <script src="js/app.js"></script>
@@ -311,46 +311,8 @@ Otherwise, follow the steps below to create the application from scratch.  The e
   ...
   ```
 
-14. **Create services.js.**
-  In `client/js/todo`, create `services.js` with the following contents:
-
-  ```
-  'use strict';
-
-  angular
-    .module('app')
-    .service('TodoService', ['Todo', function(Todo) {
-      function find() {
-        return Todo.find();
-      }
-
-      function create(obj) {
-        return Todo.create(obj);
-      }
-
-      function deleteById(itemId) {
-        return Todo.deleteById({id: itemId});
-      }
-
-      return {
-        create: create,
-        find: find,
-        deleteById: deleteById,
-      };
-    }]);
-  ```
-
-  Then add `services.js` as a dependency in `index.html`:
-  
-  ```
-  ...
-  <script src="js/todo/controllers.js"></script>
-  <script src="js/todo/services.js"></script>
-  ...
-  ```
-
-15. **Generate lb-services.js.**
-  Create a new directory named `common` in `client/js`. Switch to the `common` directory and run 
+14. **Generate lb-services.js.**
+  Create a new directory named `common` in `client/js`. Switch to the `common` directory and run:
 
   ```
   lb-ng ../../../server/server.js lb-services.js
@@ -359,7 +321,7 @@ Otherwise, follow the steps below to create the application from scratch.  The e
   >This generates a file named `lb-services.js` which is an Angular service used to interface with your back-end server. For more information, see the [LoopBack AngularJS SDK](http://docs.strongloop.com/display/LB/AngularJS+JavaScript+SDK#AngularJSJavaScriptSDK-Setup).
 
   Next, declare `lbServices` as a dependency in `client/js/app.js`:
-  
+
   ```
   ...
   angular
@@ -371,7 +333,7 @@ Otherwise, follow the steps below to create the application from scratch.  The e
   ```
 
   Then add `lb-services.js` as a dependency in `index.html`:
-  
+
   ```
   ...
   <script src="js/todo/services.js"></script>
@@ -379,7 +341,7 @@ Otherwise, follow the steps below to create the application from scratch.  The e
   ...
   ```
 
-16. **Run the application.**
+15. **Run the application.**
   From the project root, enter `slc run` and browse to [localhost:3000](http://localhost:3000) to view the application.
 
 ##More information
