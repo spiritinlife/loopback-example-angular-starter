@@ -14,9 +14,8 @@ In addition, you will need a basic understanding of:
 - [LoopBack models](http://docs.strongloop.com/display/LB/Working+with+models)
 
 ##Procedure
-Follow the steps below to create the application from scratch. In this example, we will be creating a typical Todo list web app. Doing this will give you a better understanding of how to implement AngularJS as a front-end solution for your LoopBack application.
 
-Otherwise, if you just want to see the example in action, do this:
+If you just want to see the example in action, do this:
 
 ```
 git clone https://github.com/strongloop/loopback-example-angular-starter
@@ -24,6 +23,8 @@ cd loopback-example-angular-starter
 npm install
 slc run
 ```
+
+Otherwise, follow the steps below to create the application from scratch.  The example is a typical Todo list web app. 
 
 1. **Create the application**.
   Run `slc loopback`, and name the app `loopback-example-angular-starter`.
