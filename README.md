@@ -57,27 +57,27 @@ Otherwise, follow the steps below to create the application from scratch.  The e
   Verify that model has been inserted by opening `db.json` (it will be created where you ran `slc run`). You should see this:
 
   ```
-  {
-    "ids": {
-      "User": 1,
-      "AccessToken": 1,
-      "ACL": 1,
-      "RoleMapping": 1,
-      "Role": 1,
-      "Todo": 2
-    },
-    "models": {
-      "User": {},
-      "AccessToken": {},
-      "ACL": {},
-      "RoleMapping": {},
-      "Role": {},
-      "Todo": {
-        "1": "{\"content\":\"Buy eggs\",\"id\":1}"
-      }
+{
+  "ids": {
+    "User": 1,
+    "AccessToken": 1,
+    "ACL": 1,
+    "RoleMapping": 1,
+    "Role": 1,
+    "Todo": 2
+  },
+  "models": {
+    "User": {},
+    "AccessToken": {},
+    "ACL": {},
+    "RoleMapping": {},
+    "Role": {},
+    "Todo": {
+      "1": "{\"content\":\"Buy eggs\",\"id\":1}"
     }
   }
-  ```
+}
+```
 
   >Notice the "Todo" property contains the model you just created.
 
