@@ -27,9 +27,11 @@ slc run
 Otherwise, follow the steps below to create the application from scratch.  The example is a typical Todo list web app.
 
 1. **Create the application**.
+
   Run `slc loopback`, and name the app `loopback-example-angular-starter`.
 
 2. **Configure db.json.**
+
   Edit `server/datasources.json` to look like:
   ```
 {
