@@ -49,6 +49,7 @@ Otherwise, follow the steps below to create the application from scratch.  The e
   Run `slc loopback:model Todo` to create the Todo model. Use the memory connector, expose the model via REST, leave the default plural form and add a required String property called "content".
 
 4. **Add a sample model.**
+
   Run `slc run` to start the server, go to http://localhost:3000/explorer and add a *Todo* instance with the following data:
 
   ```
@@ -84,6 +85,7 @@ Otherwise, follow the steps below to create the application from scratch.  The e
   >Notice the "Todo" property contains the model you just created.
 
 5. **Configure the vendor directory.**
+
   Create `.bowerrc` in the project root with the following contents:
 
   ```
@@ -95,9 +97,12 @@ Otherwise, follow the steps below to create the application from scratch.  The e
   >Bower installs packages in `bower_components` by default, but we reconfigure this to `client/vendor` instead to make it easier to import files into `index.html`.
 
 6. **Install front-end dependencies.**
+
   Run the `bower install angular angular-resource angular-ui-router bootstrap` from the project root.
 
-7. **Create index.html** in the `client` directory with the following contents:
+7. **Create index.html**
+
+  In the `client` directory with the following contents:
 
   ```
   <!DOCTYPE html>
@@ -144,6 +149,7 @@ Otherwise, follow the steps below to create the application from scratch.  The e
   ```
 
 9. **Add bower dependencies to index.html.**
+
   Modify `index.html` to look like:
 
   ```
@@ -195,6 +201,7 @@ Otherwise, follow the steps below to create the application from scratch.  The e
   ```
 
 11. **Create app.js and configure application routes.**
+
   In the `client` directory, create another directory named `js`. Inside the `js` directory, create a file named `app.js` with the following contents:
 
   ```
@@ -230,6 +237,7 @@ Otherwise, follow the steps below to create the application from scratch.  The e
   ```
 
 12. **Create todo.html.**
+
   In `client/js`, create a directory named `todo`. Inside the `todo` directory, create another directory named `templates`. In the `templates` directory, create a file named `todo.html` with the following contents:
 
   ```
@@ -258,6 +266,7 @@ Otherwise, follow the steps below to create the application from scratch.  The e
   ```
 
 13. **Create controllers.js.**
+
   In `client/js/todo`, create `controllers.js` with the following contents:
 
   ```
@@ -314,6 +323,7 @@ Otherwise, follow the steps below to create the application from scratch.  The e
   ```
 
 14. **Generate lb-services.js.**
+
   Create a new directory named `common` in `client/js`. Switch to the `common` directory and run:
 
   ```
@@ -344,6 +354,7 @@ Otherwise, follow the steps below to create the application from scratch.  The e
   ```
 
 15. **Run the application.**
+
   From the project root, enter `slc run` and browse to [localhost:3000](http://localhost:3000) to view the application.
 
 ##More information
