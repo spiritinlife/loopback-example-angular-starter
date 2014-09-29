@@ -34,13 +34,13 @@ Otherwise, follow the steps below to create the application from scratch.  The e
 
   Edit `server/datasources.json` to look like:
   ```
-  {
-    "db": {
-      ...
-      "file": "db.json"
-    }
+{
+  "db": {
+    ...
+    "file": "db.json"
   }
-  ```
+}
+```
 
   This change will persist model instances to a JSON file. For more information, see the [memory connector documentation](http://docs.strongloop.com/display/LB/Memory+connector#Memoryconnector-Datapersistance).
 
