@@ -158,6 +158,8 @@ Otherwise, follow the steps below to create the application from scratch.  The e
   ...
   <title>LoopBack Angular starter example</title>
   ...
+  <body ng-app="app">
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
           <a class="navbar-brand" href="#">LoopBack Angular starter example</a>
