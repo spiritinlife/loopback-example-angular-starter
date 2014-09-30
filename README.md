@@ -53,10 +53,10 @@ Otherwise, follow the steps below to create the application from scratch.  The e
   Run `slc run` to start the server, go to http://localhost:3000/explorer and add a *Todo* instance with the following data:
 
   ```
-{
-  "content": "Buy eggs"
-}
-```
+  {
+    "content": "Buy eggs"
+  }
+  ```
 
   Verify that model has been inserted by opening `db.json` (it will be created where you ran `slc run`). You should see this:
 
