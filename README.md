@@ -41,8 +41,7 @@ Otherwise, follow the steps below to create the application from scratch.  The e
     }
   }
   ```
-
-  This change will persist model instances to a JSON file. For more information, see the [memory connector documentation](http://docs.strongloop.com/display/LB/Memory+connector#Memoryconnector-Datapersistance).
+  >This change will persist model instances to a JSON file. For more information, see the [memory connector documentation](http://docs.strongloop.com/display/LB/Memory+connector#Memoryconnector-Datapersistance).
 
 3. **Create the Todo model.**
 
@@ -50,7 +49,7 @@ Otherwise, follow the steps below to create the application from scratch.  The e
 
 4. **Add a sample model.**
 
-  Run `slc run` to start the server, go to http://localhost:3000/explorer and add a *Todo* instance with the following data:
+  Run `slc run` to start the server, go to [localhost:3000](http://localhost:3000/explorer) and add a *Todo* instance with the following data:
 
   ```
   {
@@ -186,12 +185,14 @@ Otherwise, follow the steps below to create the application from scratch.  The e
   Remove `server/boot/root.js` and modify `server/server.js` to look like:
 
   ```
+  ...
   // -- Mount static files here--
   // All static middleware should be registered at the end, as all requests
   // passing the static middleware are hitting the file system
   // Example:
   var path = require('path');
   app.use(loopback.static(path.resolve(__dirname, '../client')));
+  ...
   ```
 
 11. **Create app.js and configure application routes.**
