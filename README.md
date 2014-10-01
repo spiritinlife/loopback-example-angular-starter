@@ -134,7 +134,7 @@ Otherwise, follow the steps below to create the application from scratch.  The e
   </html>
   ```
 
-  >This is just the basic Bootstrap [getting started template](http://getbootstrap.com/getting-started/).
+  >This is just the basic [Bootstrap getting started template](http://getbootstrap.com/getting-started/).
 
 8. **Create style.css.**
 
